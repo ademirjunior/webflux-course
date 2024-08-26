@@ -31,4 +31,10 @@ public class UserService {
     public Flux<User> findAll(){
         return repository.findAll();
     }
+
+    public Mono<User> update(final String id, final UserRequest userRequest) {
+        return findById(id)
+                .map(entity -> mapper.toEntity(userRequest, entity))
+                .flatMap(repository::save);
+    }
 }
