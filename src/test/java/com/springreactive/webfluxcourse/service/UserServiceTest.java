@@ -5,7 +5,6 @@ import com.springreactive.webfluxcourse.mapper.UserMapper;
 import com.springreactive.webfluxcourse.model.request.UserRequest;
 import com.springreactive.webfluxcourse.respository.UserRepository;
 import com.springreactive.webfluxcourse.service.exception.ObjectNotFoundException;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -16,6 +15,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
