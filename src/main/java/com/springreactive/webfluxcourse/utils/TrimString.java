@@ -14,7 +14,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 public @interface TrimString {
 
-    String message() default "Fiel cannot have blank spaces";
+    String message() default "Field cannot have blank spaces";
 
     /**
      * Classes que representam grupos de validação

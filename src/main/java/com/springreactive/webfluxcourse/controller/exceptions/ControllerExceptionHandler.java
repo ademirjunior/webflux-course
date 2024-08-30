@@ -43,7 +43,7 @@ public class ControllerExceptionHandler {
     public ResponseEntity<Mono<ValidationError>> validationError(WebExchangeBindException ex, ServerHttpRequest request) {
         ValidationError error = new ValidationError(LocalDateTime.now(),
                 request.getPath().toString(), HttpStatus.BAD_REQUEST.value(),
-                "Vaidation Error", "Error on atributes validation");
+                "Validation Error", "Error on attributes validation");
         for (FieldError fe : ex.getBindingResult().getFieldErrors()){
             error.addErrors(fe.getField(), fe.getDefaultMessage());
         }
